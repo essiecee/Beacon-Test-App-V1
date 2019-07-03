@@ -5,18 +5,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SessionComponent } from './session/session.component';
 import { HomeComponent } from './home/home.component';
+import { FormComponent } from './form/form.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'app-session', component: SessionComponent },
-  { path: '**', pathMatch: 'full', redirectTo: ''},
+  { path: 'app-form', component: FormComponent },
+  { path: '**', pathMatch: 'full', redirectTo: ''}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     SessionComponent,
-    HomeComponent
+    HomeComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
