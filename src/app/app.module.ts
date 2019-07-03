@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'app-session', component: SessionComponent },
-  { path: '**', pathMatch: 'full', redirectTo: '/app-session'},
+  { path: '**', pathMatch: 'full', redirectTo: ''},
 ];
 
 @NgModule({
