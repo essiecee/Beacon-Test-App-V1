@@ -1,24 +1,28 @@
-<button class="button-back" routerLink="">Back</button>
+<button class="backButton" routerLink="">Back</button>
+<h1 style="text-align: center">Session</h1>
 <form [formGroup]="myForm" class="formBody">
-  Value: {{ myForm.value | json }}
+  <!--Value: {{ myForm.value | json }} -->
   <hr>
-
+  <p> Please enter the following information: </p>
   <div *ngIf="showID">
-    <mat-form-field *ngIf="showID">
+    <mat-form-field *ngIf="showID" appearance="outline">
+      <mat-label>Study ID</mat-label>
       <input matInput placeholder="Study ID" formControlName="studyID">
     </mat-form-field>
     <br>
   </div>
  
   <div *ngIf="showName">
-    <mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
       <input matInput placeholder="Name" formControlName="name">
     </mat-form-field>
     <br>
   </div>
 
   <div *ngIf="showBirthday">
-    <mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Birthday</mat-label>
       <input matInput [matDatepicker]="picker" placeholder="Select/Enter your DOB" formControlName="dateOfBirth">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
@@ -33,9 +37,7 @@
       <mat-radio-button value="male">Male</mat-radio-button>
     </mat-radio-group>  
   </div>
-
 </form>
+<br>
+<button class="button-start" routerLink="/app-session">Start Session</button>
 
-<div>
-  <button class="button-start" routerLink="/app-session">Start Session</button>
-</div>
