@@ -14,7 +14,7 @@
   </mat-form-field>
   <br>
 
-  <mat-form-field>
+  <mat-form-field *ngIf="showBirthday">
     <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="dateOfBirth">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>

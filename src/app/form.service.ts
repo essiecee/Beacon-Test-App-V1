@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class FormService {
+
   showID: boolean = true;
   showName: boolean = true;
   showBirthday: boolean = true;
@@ -24,5 +25,21 @@ export class FormService {
 
   changeShowSex() {
     this.showSex = !this.showSex;
+  }
+
+  getShowSex() {
+    return this.showSex;
+  }
+
+  getShowBirthday() {
+    return this.showBirthday;
+  }
+
+  getShowID() {
+    return this.showID;
+  }
+
+  getShowName() {
+    return this.showName;
   }
 }
