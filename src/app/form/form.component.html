@@ -1,2 +1,39 @@
-<p> form works</p>
+<a routerLink="">Back</a>
+<form [formGroup]="myForm">
+  Value: {{ myForm.value | json }}
+  <hr>
+
+  <mat-form-field *ngIf="showID">
+    <input matInput placeholder="Study ID" formControlName="studyID">
+  </mat-form-field>
+  <br>
+  
+
+  <mat-form-field *ngIf="showName">
+    <input matInput placeholder="Name" formControlName="name">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="dateOfBirth">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <!--
+  <mat-form-field *ngIf="showBirthday">
+    <input matInput placeholder="Birthday (mm-dd-yyyy)" formControlName="dateOfBirth">
+  </mat-form-field>
+  <br>
+   -->
+  <div *ngIf="showSex">
+    <p>Sex: </p> 
+    <mat-radio-group formControlName="sex">
+      <mat-radio-button value="female">Female</mat-radio-button>
+      <mat-radio-button value="male">Male</mat-radio-button>
+    </mat-radio-group>  
+  </div>
+
+</form>
+
+
 <a routerLink="/app-session">Start Session</a>
