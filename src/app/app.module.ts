@@ -19,6 +19,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { SettingsComponent } from './settings/settings.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatIconModule } from '@angular/material';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -52,7 +54,8 @@ const appRoutes: Routes = [
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatIconModule
   ],
   exports: [
     RouterModule,

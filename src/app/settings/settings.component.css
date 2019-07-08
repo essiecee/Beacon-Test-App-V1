@@ -1,0 +1,13 @@
+.settingsPanel {
+    margin-left: 20px;
+}
+
+.backButton {
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 6px 10px;
+    font-size: 12px;
+}

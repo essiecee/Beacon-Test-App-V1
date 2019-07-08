@@ -1,30 +1,31 @@
-<a routerLink="">Back</a>
-<form [formGroup]="myForm">
+<button class="button-back" routerLink="">Back</button>
+<form [formGroup]="myForm" class="formBody">
   Value: {{ myForm.value | json }}
   <hr>
 
-  <mat-form-field *ngIf="showID">
-    <input matInput placeholder="Study ID" formControlName="studyID">
-  </mat-form-field>
-  <br>
-  
+  <div *ngIf="showID">
+    <mat-form-field *ngIf="showID">
+      <input matInput placeholder="Study ID" formControlName="studyID">
+    </mat-form-field>
+    <br>
+  </div>
+ 
+  <div *ngIf="showName">
+    <mat-form-field>
+      <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+    <br>
+  </div>
 
-  <mat-form-field *ngIf="showName">
-    <input matInput placeholder="Name" formControlName="name">
-  </mat-form-field>
-  <br>
-
-  <mat-form-field *ngIf="showBirthday">
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="dateOfBirth">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
-  <!--
-  <mat-form-field *ngIf="showBirthday">
-    <input matInput placeholder="Birthday (mm-dd-yyyy)" formControlName="dateOfBirth">
-  </mat-form-field>
-  <br>
-   -->
+  <div *ngIf="showBirthday">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Select/Enter your DOB" formControlName="dateOfBirth">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br>
+  </div>
+    
   <div *ngIf="showSex">
     <p>Sex: </p> 
     <mat-radio-group formControlName="sex">
@@ -35,5 +36,6 @@
 
 </form>
 
-
-<a routerLink="/app-session">Start Session</a>
+<div>
+  <button class="button-start" routerLink="/app-session">Start Session</button>
+</div>
