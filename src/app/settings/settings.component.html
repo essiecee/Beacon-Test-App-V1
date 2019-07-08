@@ -3,32 +3,37 @@
 Study ID
 <mat-slide-toggle
     [color]="color"
-    [checked]="checked"
-    [disabled]="disabled">
+    [checked]="showID"
+    [disabled]="disabled"
+    (click)="changeShowID()"
+>
 </mat-slide-toggle>
 <br>
 
 Name
 <mat-slide-toggle
     [color]="color"
-    [checked]="checked"
-    [disabled]="disabled">
+    [checked]="showName"
+    [disabled]="disabled"
+    (click)="changeShowName()">
 </mat-slide-toggle>
 <br>
 
 Birthday
 <mat-slide-toggle
     [color]="color"
-    [checked]="checked"
-    [disabled]="disabled">
+    [checked]="showBirthday"
+    [disabled]="disabled"
+    (click)="changeShowBirthday()">
 </mat-slide-toggle>
 <br>
 
 Sex
 <mat-slide-toggle
     [color]="color"
-    [checked]="checked"
-    [disabled]="disabled">
+    [checked]="showSex"
+    [disabled]="disabled"
+    (click)="changeShowSex()">
 </mat-slide-toggle>
 <br>
 

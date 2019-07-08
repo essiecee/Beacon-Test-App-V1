@@ -6,12 +6,38 @@ import { FormService } from '../form.service';
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
-  checked: boolean = true;
+
+  showID: boolean;
+  showName: boolean;
+  showBirthday: boolean;
+  showSex: boolean;
+
   constructor(
     private formService: FormService
   ) { }
 
-  ngOnInit() {
+  ngOnInit(
+  ) {
+    this.showID = this.formService.getShowID();
+    this.showName = this.formService.getShowName();
+    this.showBirthday = this.formService.getShowBirthday();
+    this.showSex = this.formService.getShowSex();
+  }
+
+  changeShowID() {
+    this.formService.changeShowID();
+  }
+
+  changeShowName() {
+    this.formService.changeShowName();
+  }
+
+  changeShowBirthday() {
+    this.formService.changeShowBirthday();
+  }
+
+  changeShowSex() {
+    this.formService.changeShowSex();
   }
 
 }
