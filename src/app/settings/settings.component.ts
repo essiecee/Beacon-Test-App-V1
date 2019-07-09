@@ -7,10 +7,10 @@ import { FormService } from '../form.service';
 })
 export class SettingsComponent implements OnInit {
 
-  showID: boolean;
-  showName: boolean;
-  showBirthday: boolean;
-  showSex: boolean;
+  showID: boolean = true;
+  showName: boolean = true;
+  showBirthday: boolean = true;
+  showSex: boolean = true;
 
   constructor(
     private formService: FormService

@@ -21,6 +21,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatIconModule } from '@angular/material';
 
+// testing datepicker from ionic
+//import { DatePicker } from '@ionic-native/date-picker/ngx';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -62,6 +64,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     MatDatepickerModule,
+    //DatePicker,
   ],
   bootstrap: [AppComponent]
 })
