@@ -25,6 +25,15 @@ export class FormComponent implements OnInit {
     ) {}
 
   ngOnInit() {
+    // this.datePicker.show({
+    //   date: new Date(),
+    //   mode: 'date',
+    //   androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK
+    // }).then(
+    //   date => console.log('Got date: ', date),
+    //   err => console.log('Error occurred while getting date: ', err)
+    // );
+
     this.myForm = this.fb.group({
       studyID: '',
       name: '',
@@ -38,15 +47,6 @@ export class FormComponent implements OnInit {
     this.showName = this.formService.getShowName();
     this.showBirthday = this.formService.getShowBirthday();
     this.showSex = this.formService.getShowSex();
-
-    // this.datePicker.show({
-    //   date: new Date(),
-    //   mode: 'date',
-    //   androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK
-    // }).then(
-    //   date => console.log('Got date: ', date),
-    //   err => console.log('Error occurred while getting date: ', err)
-    // );
   }
 
 }

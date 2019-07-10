@@ -1,11 +1,12 @@
 <button class="backButton" routerLink="">Back</button>
+
 <h1 style="text-align: center">Session</h1>
 <form [formGroup]="myForm" class="formBody">
   <!--Value: {{ myForm.value | json }} -->
   <hr>
-  <p> Please enter the following information: </p>
+  <p *ngIf="showName && showBirthday && showSex && showID"> Please enter the following information: </p>
   <div *ngIf="showID">
-    <mat-form-field *ngIf="showID" appearance="outline">
+    <mat-form-field appearance="outline">
       <mat-label>Study ID</mat-label>
       <input matInput placeholder="Study ID" formControlName="studyID">
     </mat-form-field>
